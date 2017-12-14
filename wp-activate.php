@@ -1,14 +1,8 @@
 <?php
-/**
- * Confirms that the activation key that is sent in an email after a user signs
- * up for a new site matches the key for that user and then displays confirmation.
- *
- * @package WordPress
- */
 
 define( 'WP_INSTALLING', true );
 
-/** Sets up the WordPress Environment. */
+/** Sets up the WordPress */
 require( dirname(__FILE__) . '/wp-load.php' );
 
 require( dirname( __FILE__ ) . '/wp-blog-header.php' );
@@ -24,11 +18,6 @@ if ( is_object( $wp_object_cache ) )
 // Fix for page title
 $wp_query->is_404 = false;
 
-/**
- * Fires before the Site Activation page is loaded.
- *
- * @since 3.0.0
- */
 do_action( 'activate_header' );
 
 /**
